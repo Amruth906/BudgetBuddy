@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f9fb;
+  color: #2c3e50;
+  display: flex;
+}
+
+.sidebar {
+  background: #1f2a38;
+  color: white;
+  width: 220px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 12px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+  background: #2e3b4e;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.topbar h2 {
+  margin: 0;
+}
+
+.topbar span {
+  color: #24a148;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card.income p {
+  color: #24a148;
+}
+.card.expense p {
+  color: #d62828;
+}
+.card.saving p {
+  color: #fca311;
+}
+.card.category p {
+  color: #0077b6;
+}
+
+.transactions h2 {
+  margin-top: 0;
+}
+
+.transactions table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.transactions th,
+.transactions td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.transactions th {
+  background: #f0f2f5;
+}
+
+.transactions td.income {
+  color: #24a148;
+  font-weight: bold;
+}
+
+.transactions td.expense {
+  color: #d62828;
+  font-weight: bold;
+}
+
+.breakdown h2 {
+  margin-top: 20px;
+}
+
+.bar {
+  margin: 12px 0;
+}
+
+.bar span {
+  display: inline-block;
+  width: 100px;
+  font-size: 14px;
+}
+
+.progress {
+  display: inline-block;
+  width: 70%;
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.fill.food {
+  width: 60%;
+  background: #d62828;
+}
+.fill.transport {
+  width: 25%;
+  background: #0077b6;
+}
+.fill.bills {
+  width: 40%;
+  background: #fca311;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    min-height: auto;
+  }
+  .overview {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bar span {
+    width: 80px;
+  }
+}
